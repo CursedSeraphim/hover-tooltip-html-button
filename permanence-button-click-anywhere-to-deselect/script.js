@@ -7,12 +7,12 @@ function toggleTextbox(event, element) {
     hoverElement.classList.toggle('active');
 }
 
-// // Add an event listener to the document to close the textbox when clicked outside
-// document.addEventListener('click', function(event) {
-//     const activeElements = document.querySelectorAll('.hover-element.active');
-//     activeElements.forEach(function(activeElement) {
-//         if (!activeElement.contains(event.target)) {
-//             activeElement.classList.remove('active');
-//         }
-//     });
-// });
+// Add an event listener to the document to close the textbox when clicked outside
+document.addEventListener('click', function(event) {
+    const activeElements = document.querySelectorAll('.hover-element.active');
+    activeElements.forEach(function(activeElement) {
+        if (!activeElement.contains(event.target)) {
+            activeElement.classList.remove('active');
+        }
+    });
+});
