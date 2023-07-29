@@ -1,0 +1,41 @@
+.hover-element {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.button-text {
+    z-index: 2;
+    position: relative;
+}
+
+.text-box {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    height: 0;
+    z-index: 0;
+}
+
+.hover-element:hover .text-box,
+.hover-element.active .text-box {
+    opacity: 1;
+    transform: scaleY(1);
+    height: auto;
+}
+
+.hover-element:hover,
+.hover-element.active {
+    background-color: #ccc;
+}
